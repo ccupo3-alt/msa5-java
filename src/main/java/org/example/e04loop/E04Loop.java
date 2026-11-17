@@ -12,5 +12,25 @@ public class E04Loop {
                 System.out.printf("i값: %d, z값: %d%n", i, z); // %n은 개행
             }
         }
+
+
+        // 구구단 2~9단을 출력
+        // 예시)
+        // ** 2단 **
+        // 2 X 1 = 2
+        // 2 X 2 = 4
+        // ...
+        // ** 3단 **
+        // 3 X 1 = 3
+        // 3 X 2 = 6
+        // ...
+        // 9 X 8 = 72
+        // 9 X 9 = 81
+        for(int i =2; i <= 9; i++) {
+            System.out.printf("** %d단 **%n", i);
+            for(int z = 1; z <= 9; z++) {
+                System.out.printf("%d X %d = %d%n", i, z, i*z);
+            }
+        }
     }
 }
