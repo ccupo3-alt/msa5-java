@@ -1,14 +1,17 @@
 package org.example.e06oop;
 
+import org.example.e06oop.inheritance.FlyingFish;
+import org.example.e06oop.inheritance.Whale;
+
 public class MainOOP {
     public static void main(String[] args) {
-       Whale whale = new Whale();
-       Whale whale2 = whale;
-       FlyingFish flyingFish = new FlyingFish();
-       System.out.println(whale.name);
-       whale.swimming();
-       System.out.println(Whale.name);
-       // System.out.println(Whale.age);
+       // Whale whale = new Whale();
+       // Whale whale2 = whale;
+       // FlyingFish flyingFish = new FlyingFish();
+       // System.out.println(whale.name);
+       // whale.swimming();
+       // System.out.println(Whale.name);
+       // // System.out.println(Whale.age);
 
         AccessModifier accessModifier = new AccessModifier();
         System.out.println(accessModifier.strPublic);
@@ -19,5 +22,19 @@ public class MainOOP {
         System.out.println();
         System.out.println(OverloadingOOP.add(1));
         System.out.println(OverloadingOOP.add(1,2));
+
+        ConstructOOP constructOOP = new ConstructOOP();
+
+
+        // 상속
+        FlyingFish flyingFish = new FlyingFish("날치", "바다");
+        System.out.println(flyingFish.breath());
+        System.out.println(flyingFish.flying());
+        System.out.println(flyingFish.living());
+
+        Whale whale = new Whale("고래","바다");
+        System.out.println(whale.breath());
+        System.out.println(whale.swimming());
+        System.out.println(whale.living());
     }
 }
